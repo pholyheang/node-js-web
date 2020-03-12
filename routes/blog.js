@@ -4,7 +4,7 @@ var fetch = require('node-fetch');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-	const url = `http://localhost:4000/graphql`;
+	const url = `http://localhost:3000/graphql`;
 	const query = `
 	  	query {
 	    	getUsers {
