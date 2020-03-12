@@ -41,10 +41,7 @@ app.use('/blog/add', blogRouter);
 app.use('/blog/delete', blogRouter);
 app.use('/users', usersRouter);
 
-app.use(function(req, res, next) {
 
-  next(createError(404));
-});
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -62,23 +59,24 @@ app.use((req, res, next) => {
     host     : 'localhost',
     user     : 'root',
     password : '',
-    database : 'codeigniter_db'
+    database : 'db_profile'
   });
   req.mysqlDb.connect();
   next();
 }); 
 
+
 var schema = buildSchema(`
   type User {
     id: String
-    fname: String
-    email: String
+    name: String
+    nickname: String
   }
   type Query {
     getUsers: [User],
     getUserInfo(id: Int) : User
-    updateUserInfo(id: Int, fname: String, email: String): Boolean
-    createUser(fname: String, email: String): Boolean
+    updateUserInfo(id: Int, name: String, nickname: String): Boolean
+    createUser(name: String, nickname: String): Boolean
     deleteUser(id: Int): Boolean
   }
 `);
@@ -86,17 +84,17 @@ var schema = buildSchema(`
 const queryDB = (req, sql, args) => new Promise((resolve, reject) => {
     req.mysqlDb.query(sql, args, (err, rows) => {
         if (err)
-            return reject(err);
+          return reject(err);
         rows.changedRows || rows.affectedRows || rows.insertId ? resolve(true) : resolve(rows);
     });
 });
 
 var root = {
-  getUsers: (args, req) => queryDB(req, "select * from user").then(data => data),
-  getUserInfo: (args, req) => queryDB(req, "select * from user where id = ?", [args.id]).then(data => data[0]),
-  updateUserInfo: (args, req) => queryDB(req, "update user SET ? where id = ?", [args, args.id]).then(data => data),
-  createUser: (args, req) => queryDB(req, "insert into user SET ?", args).then(data => data),
-  deleteUser: (args, req) => queryDB(req, "delete from user where id = ?", [args.id]).then(data => data)
+  getUsers: (args, req) => queryDB(req, "select * from users").then(data => data),
+  getUserInfo: (args, req) => queryDB(req, "select * from users where id = ?", [args.id]).then(data => data[0]),
+  updateUserInfo: (args, req) => queryDB(req, "update users SET ? where id = ?", [args, args.id]).then(data => data),
+  createUser: (args, req) => queryDB(req, "insert into users SET ?", args).then(data => data),
+  deleteUser: (args, req) => queryDB(req, "delete from users where id = ?", [args.id]).then(data => data)
 };
 
 app.use('/graphql', graphqlHTTP({
@@ -119,6 +117,11 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.use(function(req, res, next) {
+
+  next(createError(404));
 });
 
 module.exports = app;

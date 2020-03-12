@@ -8,7 +8,7 @@
 
 	<ul>
       <% title.map(function(item,i){ %>
-        <li><%= item.email %></li>
+        <li><%= item.name %></li>
       <% }) %>
     </ul>
     <form name="form1" method="POST" action="/blog/add">
@@ -33,7 +33,7 @@
     	<form name="form1" method="POST" action="/blog/delete">
     	<table>
         <tr>
-        <td><%= item.email %> <%= item.id %></td>
+        <td><%= item.name %> <%= item.id %></td>
         <td><input type="hidden" name="id"  value="<%= item.id %>"></td>       
         <td colspan="2"><input type="submit" value="delete" ></td>
         </tr>

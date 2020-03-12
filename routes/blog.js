@@ -9,8 +9,8 @@ router.get('/', function(req, res, next) {
 	  	query {
 	    	getUsers {
 	    		id,
-			    fname,
-			    email
+			    name,
+			    nickname
 			}
 	  	}`;
 	  	const opts = {
@@ -30,11 +30,11 @@ router.get('/', function(req, res, next) {
 router.post('/add',function(req,res){
 	const url = `http://localhost:4000/graphql`;
 	const student = {
-        first : req.body.fname,
-        last : req.body.lname
+        first : req.body.name,
+        last : req.body.name
     }
 
-	const query = 'query { createUser(fname: "'+student.first+'", email: "'+student.last+'")}';
+	const query = 'query { createUser(name: "'+student.first+'", name: "'+student.last+'")}';
 	const opts = {
 		  method: "POST",
 		  headers: { "Content-Type": "application/json" },
