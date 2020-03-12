@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= 123 %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+	<ul>
+      <% title.map(function(item,i){ %>
+        <li><%= item.email %></li>
+      <% }) %>
+    </ul>
+    <form name="form1" method="POST" action="/blog/add">
+    <table>
+        <tr>
+        <td>First name</td>
+        <td><input type="text" name="fname" ></td>
+        </tr>
+        <tr>
+        <td>last name</td>
+        <td><input type="text" name="lname" ></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="submit" value="Save" ></td>
+        </tr>
+    </table>
+    </form>
+
+    
+    
+    	<% title.map(function(item,i){ %>
+    	<form name="form1" method="POST" action="/blog/delete">
+    	<table>
+        <tr>
+        <td><%= item.email %> <%= item.id %></td>
+        <td><input type="hidden" name="id"  value="<%= item.id %>"></td>       
+        <td colspan="2"><input type="submit" value="delete" ></td>
+        </tr>
+        </table>
+        </form> 
+        <% }) %>
+    
+    
+
+  </body>
+</html>
