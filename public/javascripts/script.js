@@ -10,19 +10,18 @@ $(document).ready(function() {
 		$(this).addClass("active"); 
 	});
 
-	$(".main-left").removeClass("open");
+	
 	$(".main_bar").click(function(){
 		 $(".main-left").toggleClass("left_min");
 		 $(".main-right").toggleClass("right_min");
-		 $(".main-left").toggleClass("open");
 	})
 
-	$(".open > ul >.child").mousemove(function(e){
-		 $(".main-left").addClass("left_min");
-		 $(".main-right").addClass("right_min");
+	$(document).on("mousemove",".left_min > ul >.child",function(e){
+		 $(".main-left").addClass("left_min1");
+		 $(".main-right").addClass("right_min1");
 	})
-	$(".open > ul >.child").mouseout(function(e){
-		 $(".main-left").removeClass("left_min");
-		 $(".main-right").removeClass("right_min");
+	$(document).on("mouseout",".left_min > ul >.child",function(e){
+		 $(".main-left").removeClass("left_min1");
+		 $(".main-right").removeClass("right_min1");
 	})
 });
