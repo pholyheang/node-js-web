@@ -1,0 +1,56 @@
+.i_add{
+	background-image: url(/images/icon01.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+.option{
+	background-position: 0 -100px;
+}
+.main_bar{
+	position: relative;
+    float: left;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.i_bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background: #222;
+    margin-top: 4px;
+}
+.i_home{
+	background-image: url(/images/home.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 26px;
+    width: 28px;
+    background-position: 50% 83%;
+    vertical-align: middle;
+}
+.i_{
+	background-image: url(/images/profile.png);
+    background-size: 70px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 26px;
+    width: 28px;
+    vertical-align: middle;
+}
+.i_profile{
+	background-position: 6px 3px;
+}
+.i_setting{
+	background-position: 6px -68px;
+}
+
+/*<i class="fi fi-three-horizontal-lines"></i>
+content:"\eade";
+&#xeade;*/

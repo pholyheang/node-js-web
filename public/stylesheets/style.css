@@ -1,32 +1,102 @@
 body {
-
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
 }
-
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+ul{ 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 a {
-  color: #00B7FF;
+  color: #ffffff;
+  text-decoration-line: none;
 }
 .nav-link{
 	color: #000!important;
 }
-.main-left{
-	/*width: 15%;*/
+.header{
+    width: 100%;
+    display: flex;
+    /*border: 1px solid #009688;*/
+    /*background-color: #009688;*/
+    background-image: linear-gradient(-225deg, #03A9F4 0%, #00b7ff 48%, #6E7FF3 100%);
+}
+.main-right{
     height: 100%;
-    border: 1px solid #ddd;
-    position: absolute !important;
+    border: 1px solid #eee;
+    max-height: 100%;
+    overflow-y: auto;
+    min-height: 616px;
+    margin-left: 230px;
+    position: relative;
+    background-color: #eee;
+    transition: 1s;
+}
+.right_min{
+    margin-left: 56px !important;
+}
+
+.main-left{
+    width: 230px;
+	height: 100%;
+    border: none;
+    position: absolute;
     left: 0;
     float: left;
     max-height: 100%;
     overflow-y: auto;
     background-color: #ddd;
+    transition: 1s;
+    min-width: 230px;
 }
-.main-right{
-	/*width: 85%;*/
-    height: 100%;
-    border: 1px solid #ddd;
-    position: absolute !important;
-    right: 0;
-    float: right;
-    max-height: 100%;
-    overflow-y: auto;
+.left_min{
+    width: 56px !important;
+    min-width: 230px;
+
 }
+.main-left>ul>li>a{
+    display: block;
+    padding: 12px 5px 12px 15px;
+    background-color: hsla(210, 50%, 15%, 0.78);
+}
+.main-left>ul>li>a:hover{
+    background-color: hsl(210, 19%, 38%);
+}
+.child a{
+
+}
+
+.child>ul>li>a{
+    display: block;
+    padding: 9px 5px 9px 25px;
+    background-color: hsl(210, 19%, 29%);    
+}
+.child>ul>li>a:hover{
+    background-color: hsl(210, 19%, 38%);    
+}
+.child>ul>li.active> a{
+    background-color: #2196F3;
+}
+
+
+
+
+/*.child ul li:last-child{
+    #0288D1
+    border-bottom: none;
+}*/
