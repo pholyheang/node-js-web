@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$(".child ul").hide();
+	// $(".child ul").hide();
 	$(".child > a").click(function(){
 	   $(this).parent().find( "ul" ).slideToggle();
 	})

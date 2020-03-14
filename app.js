@@ -36,6 +36,7 @@ app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
 // load routes
 app.use('/', indexRouter);
+app.use('/icon', indexRouter);
 app.use('/blog', blogRouter);
 app.use('/blog/add', blogRouter);
 app.use('/blog/delete', blogRouter);
