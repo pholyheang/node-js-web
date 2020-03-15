@@ -54,17 +54,17 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.use((req, res, next) => {
+// app.use((req, res, next) => {
 
-  req.mysqlDb = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : '',
-    database : 'db_profile'
-  });
-  req.mysqlDb.connect();
-  next();
-}); 
+//   req.mysqlDb = mysql.createConnection({
+//     host     : 'localhost',
+//     user     : 'root',
+//     password : '',
+//     database : 'db_profile'
+//   });
+//   req.mysqlDb.connect();
+//   next();
+// }); 
 
 
 var schema = buildSchema(`
