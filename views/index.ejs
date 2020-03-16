@@ -1,10 +1,11 @@
 <%- include('partials/header') %>
-<%- include('partials/menuLeft') %>
-	
+<%- include('partials/menuLeft', {name: 'home'}) %> 
 
 	<div class="main-right">
 		<svg><use href="#add" xlink:href="#add"></use></svg>
 		<svg><use href="#arrow-down-outline" xlink:href="#arrow-down-outline"></use></svg>
+		<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-default waves-effect waves-light">Default</button>
 	</div>
 	
 <%- include('partials/footer') %>

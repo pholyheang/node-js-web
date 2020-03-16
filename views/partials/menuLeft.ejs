@@ -1,9 +1,7 @@
 <header class="header">
 		<div>
-			<div class="main_bar">
-				<span class="i_bar"></span>
-				<span class="i_bar"></span>
-				<span class="i_bar"></span>
+			<div class="main_bar waves-effect waves-light">
+				<svg style="margin-right: 0;"><use href="#menu" xlink:href="#menu"></use></svg>
 			</div>
 		</div>
 	</header>
@@ -11,23 +9,47 @@
 	<div class="main-left">
 		<ul>
 			<li class="child">
-				<a href="/"><svg><use href="#home" xlink:href="#home"></use></svg> Homepage</a>			
+				<a href="/" class="waves-effect waves-light"><svg><use href="#home-outline" xlink:href="#home-outline"></use></svg> Homepage</a>
 			</li>
 			<li class="child">
-				<a href="javascript:void(0)"><svg><use href="#person-circle-outline" xlink:href="#person-circle-outline"></use></svg> Profile Manager</a>
+				<a href="javascript:void(0)" class="waves-effect waves-light">
+					<svg><use href="#person-circle-outline" xlink:href="#person-circle-outline"></use></svg> 
+					Profile Manager
+					<svg  class="c1 <%= name == 'Profile' ? 'addsvg1' : ''%>">
+						<use href="#chevron-back-outline" xlink:href="#chevron-back-outline"></use>
+					</svg>
+				</a>
 				<ul class="ul">
-					<li>
-						<a href="#"><svg><use href="#radio-button-on" xlink:href="#radio-button-on"></use></svg> Profile user</a>				
+					<li class="<%= name == 'Profile' ? 'active' : '' %>">
+						<a href="#" class="waves-effect waves-light">
+							<svg><use href="#radio-button-on" xlink:href="#radio-button-on"></use></svg> 
+							Profile user
+						</a>				
 					</li>
 				</ul>
 			</li>
 			<li class="child">
-				<a href="javascript:void(0)"><svg><use href="#alert-circle-outline" xlink:href="#alert-circle-outline"></use></svg> Icon</a>
-				<ul class="ul">
-					<li>
-						<a href="/icon"><svg><use href="#radio-button-on" xlink:href="#radio-button-on"></use></svg> ionic icon</a>				
-					</li>							
+				<a href="javascript:void(0)" class="waves-effect waves-light">
+					<svg><use href="#apps" xlink:href="#apps"></use></svg>
+					components
+					<svg  class="c1 <%= name === 'icon' || name === 'button' ? 'addsvg1' : ''%>">
+						<use href="#chevron-back-outline" xlink:href="#chevron-back-outline"></use>
+					</svg>
+				</a>
+				<ul class="ul" style="<%= name === 'icon' || name === 'button' ? 'display: block;' : ''%>">
+					<li class="<%= name == 'icon' ? 'active' : '' %> ">
+						<a href="/icon" class="waves-effect waves-light">
+							<svg><use href="#radio-button-on" xlink:href="#radio-button-on"></use></svg>
+							ionic icon
+						</a>	
+					</li>
+					<li class="<%= name == 'button' ? 'active' : '' %> ">
+						<a href="/button" class="waves-effect waves-light">
+							<svg><use href="#radio-button-on" xlink:href="#radio-button-on"></use></svg>
+							button
+						</a>
+					</li>
 				</ul>
-			</li>			
+			</li>
 		</ul>
 	</div>
