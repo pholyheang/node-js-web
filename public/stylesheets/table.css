@@ -1,0 +1,54 @@
+table{
+	width: 100%;
+}
+.tbl_border thead>tr>td{
+	border: 1px solid #ddd;
+	padding: 12px;
+	font-weight: 600;
+}
+.tbl_border tbody>tr>td{
+	border: 1px solid #ddd;
+	padding: 12px;
+}
+.full{
+	padding: 0!important;
+	margin: 0 !important;
+}
+.tbl_full thead>tr>td{
+	border-bottom: 1px solid #ddd;
+	padding: 12px;
+	font-weight: 600;
+}
+.tbl_full tbody>tr>td{
+	border-bottom: 1px solid #ddd;
+	padding: 12px;
+}
+.tbl_full tbody>tr:last-child td{
+	border-bottom: 0;
+}
+.tbl_hover tbody>tr:hover{
+	background-color: #eee;
+}
+
+.tbl_even tbody>tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+
+.card_tbl{
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
+	background-color: #fff;
+}
+.card_tbl .card_header{
+	border-bottom: 1px solid #ddd;
+	padding: 12px 20px;	
+}
+.card_tbl .card_body{
+	padding: 20px;
+	overflow: auto;
+}
+.card_tbl .card_title{
+	margin: 0;
+	font-weight: 500 !important;
+}

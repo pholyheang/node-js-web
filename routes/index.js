@@ -7,12 +7,17 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/icon', function(req, res, next) {
-  res.render('icon', { title: 'Express'});
+  res.render('component/icon', { title: 'Express'});
 });
 
 router.get('/button', function(req, res, next) {
-  res.render('button', { title: 'Express'});
+  res.render('component/button', { title: 'Express'});
 });
+
+router.get('/table', function(req, res, next) {
+  res.render('table/stable', { title: 'Express'});
+});
+
 
 
 module.exports = router;

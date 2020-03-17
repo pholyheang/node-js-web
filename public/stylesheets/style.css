@@ -26,9 +26,31 @@ ul{
     display: none;
 }
 a {
-  color: #ffffff;
-  text-decoration-line: none;
+  color: #ffffff !important;
+  text-decoration-line: none !important;
 }
+table
+{
+    border-collapse: collapse;
+}
+
+caption
+{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    caption-side: bottom; 
+
+    text-align: left;
+
+    color: #8898aa;
+}
+
+th
+{
+    text-align: inherit;
+}
+
 .nav-link{
 	color: #000!important;
 }
@@ -97,17 +119,18 @@ a {
 .child a{
 
 }
-
 .child>ul>li>a{
     display: block;
     padding: 9px 5px 9px 25px;
-    background-color: hsl(210, 19%, 29%);    
+    background-color: hsl(210, 19%, 29%);
 }
 .child>ul>li>a:hover{
     background-color: hsl(210, 19%, 38%);    
 }
 .child>ul>li.active> a{
     background-color: #2196F3;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    z-index: 2;
 }
 .addsvg1{
     transform: rotate(-90deg);
