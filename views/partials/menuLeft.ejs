@@ -20,7 +20,7 @@
 					</svg>
 				</a>
 				<ul class="ul">
-					<li class="<%= name == 'Profile' ? 'active' : '' %>">
+					<li class="<%= name == 'Profile' && num == '1' ? 'active' : '' %>">
 						<a href="#" class="waves-effect waves-light">
 							<svg id="_svg"><use href="#radio-button-on" xlink:href="#radio-button-on"></use></svg> 
 							Profile user
@@ -32,38 +32,51 @@
 				<a href="javascript:void(0)" class="waves-effect waves-light">
 					<svg id="_svg"><use href="#apps" xlink:href="#apps"></use></svg>
 					components
-					<svg  class="c1 <%= name === 'icon' || name === 'button' ? 'addsvg1' : ''%>">
+					<svg  class="c1 <%= name === 'compo' ? 'addsvg1' : ''%>">
 						<use href="#chevron-back-outline" xlink:href="#chevron-back-outline"></use>
 					</svg>
 				</a>
-				<ul class="ul" style="<%= name === 'icon' || name === 'button' ? 'display: block;' : ''%>">
-					<li class="<%= name == 'icon' ? 'active' : '' %> ">
+				<ul class="ul" style="<%= name === 'compo' ? 'display: block;' : ''%>">
+					<li class="<%= num === '1' ? 'active' : '' %> ">
 						<a href="/icon" class="waves-effect waves-light">
 							<svg id="_svg"><use href="#radio-button-on" xlink:href="#radio-button-on"></use></svg>
 							ionic icon
 						</a>	
 					</li>
-					<li class="<%= name == 'button' ? 'active' : '' %> ">
+					<li class="<%= num === '2' ? 'active' : '' %> ">
 						<a href="/button" class="waves-effect waves-light">
 							<svg id="_svg"><use href="#radio-button-on" xlink:href="#radio-button-on"></use></svg>
 							button
 						</a>
 					</li>
+					<li class="<%= num === '3' ? 'active' : '' %> ">
+						<a href="/loading" class="waves-effect waves-light">
+							<svg id="_svg"><use href="#radio-button-on" xlink:href="#radio-button-on"></use></svg>
+							loading
+						</a>
+					</li>
+
 				</ul>
 			</li>
 			<li class="child">
 				<a href="javascript:void(0)" class="waves-effect waves-light">
 					<svg id="_svg"><use href="#tablet-landscape-outline" xlink:href="#tablet-landscape-outline"></use></svg>
 					Table
-					<svg  class="c1 <%= name === 'table' || name === 'button' ? 'addsvg1' : ''%>">
+					<svg  class="c1 <%= name === 'table' ? 'addsvg1' : ''%>">
 						<use href="#chevron-back-outline" xlink:href="#chevron-back-outline"></use>
 					</svg>
 				</a>
 				<ul class="ul" style="<%= name === 'table' ? 'display: block;' : ''%>">
-					<li class="<%= name == 'table' ? 'active' : '' %> ">
+					<li class="<%= name == 'table' && num === '1' ? 'active' : '' %> ">
 						<a href="/table" class="waves-effect waves-light">
 							<svg id="_svg"><use href="#radio-button-on" xlink:href="#radio-button-on"></use></svg>
 							Simple Table
+						</a>	
+					</li>
+					<li class="<%= name == 'table' && num === '2' ? 'active' : '' %> ">
+						<a href="/table-smart" class="waves-effect waves-light">
+							<svg id="_svg"><use href="#radio-button-on" xlink:href="#radio-button-on"></use></svg>
+							Smart Table
 						</a>	
 					</li>				
 				</ul>

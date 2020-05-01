@@ -1,0 +1,99 @@
+<%- include('../partials/header') %>
+<%- include('../partials/menuLeft', {name: "compo", num: '3'}) %>
+
+	<div class="main-right">
+		<div style="padding: 12px;position: relative;">
+			<div class="myrun"></div>
+			<div class="line line1"></div>
+			<div class="line line2"></div>
+			<div class="line line3"></div>
+			<div class="line line4"></div>
+			<div class="point"></div>
+
+		</div>
+
+	</div>
+<%- include('../partials/footer') %>
+<style type="text/css">
+.line{
+	position: absolute;
+	width: 100px;
+	height:5px;
+	background-color:#ddd;
+}
+.line1{	
+	transform: translate(10px,20px) rotate(25deg);
+}
+.line2{
+	transform: translate(100%,40px) rotate(0deg);
+}
+.line3{
+	transform: translate(148%,88px) rotate(90deg);
+}
+.line4{
+	width: 228px !important;
+	transform: translate(-5px,68px) rotate(37deg);
+}
+.point{
+	width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+    top: 10px;
+    left: 26px;
+}
+
+.myrun {
+	top: 10px;
+   	left: 26px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    -webkit-animation-name: Player1;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: cubic-bezier(0.1, 0.1, 0.1, 0.1);
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: 5;
+    -webkit-animation-direction: normal;
+    -webkit-animation-play-state: running;
+    z-index:99;
+}
+@-webkit-keyframes Player1 {
+    0% {
+        background:red;
+        top: 10px;
+	   	left: 26px;
+    }
+    25% {
+        background:yellow;
+        top: 50px;
+    	left: 109px;
+    }
+    50% {
+        background:blue;
+        top: 49px;
+	    left: 204px;
+    }
+    75% {
+        background:green;
+        top: 144px;
+	    left: 204px;
+    }
+    100% {
+        background:red;
+        top: 10px;
+	    left: 26px;
+    }
+}
+	
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#123').on('click', function(){
+			alert(123)
+		});
+	});
+</script>

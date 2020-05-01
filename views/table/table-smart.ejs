@@ -1,0 +1,72 @@
+<%- include('../partials/header') %>
+<%- include('../partials/menuLeft', {name: "table", num: '2'}) %>
+<style type="text/css">
+	.x-layer {
+	    position: absolute !important;
+	    overflow: hidden;
+	    zoom: 1;
+	}
+</style>
+	<div class="main-right">
+		<div style="padding: 12px">
+			<div class="card_tbl">
+				<div class="card_header">
+					<h3 class="card_title">Bordered Table</h3>
+				</div>
+				<div class="card_body">
+					<table class="tbl_border" id="myTable">
+						<thead>
+							<tr>
+								<td style="width: 50px;">No</td>
+								<td>Name</td>
+								<td>Country</td>
+								<td>Province</td>
+								<td style="width: 80px;">status</td>
+							</tr>
+						</thead>
+						<tbody id="loadAdd mytbody">
+							<tr>
+								<td>1</td>
+								<td>								
+									<div style="position: relative;display: inline;">
+										<input id="loadselect" type="text" name="name" autocomplete="off">
+										<div id="addTr" style="position: absolute; right: 0px; width: 18px; top: -3px; border-left: 1px solid #a8a8;">
+											<svg id="_svg" style='width: 15px!important;'>
+												<use href="#caret-down-outline" xlink:href="#caret-down-outline"></use>
+											</svg>
+										</div>
+									</div>								
+								
+								</td>
+								<td>cambo</td>
+								<td>pp</td>
+								<td>active</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>
+									<div style="position: relative;display: inline;">
+										<input id="loadselect" type="text" name="name" autocomplete="off">
+										<div id="addTr" style="position: absolute; right: 0px; width: 18px; top: -3px; border-left: 1px solid #a8a8;">
+											<svg id="_svg" style='width: 15px!important;'>
+												<use href="#caret-down-outline" xlink:href="#caret-down-outline"></use>
+											</svg>
+										</div>
+									</div>	
+								</td>
+								<td>cambo</td>
+								<td>pp</td>
+								<td>active</td>
+							</tr>
+						</tbody>
+					</table>
+					<button type="button" id="" class="_btn btn_primary waves-effect waves-light">
+						<svg id="_svg"><use href="#add-outline" xlink:href="#add-outline"></use></svg>
+						Primary
+					</button>					
+				</div>
+				
+			</div>			
+		</div>
+	</div>
+<%- include('../partials/footer') %>
